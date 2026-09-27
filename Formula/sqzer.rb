@@ -1,39 +1,39 @@
 class Sqzer < Formula
   desc "Command-line interface for sqzer."
   homepage "https://sqzer.dev"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.0/sqzer-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "66467e03ea768225e8de0a99f4cfa952e53028b4ea559fee54db8d3a9720cd06"
+      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.1/sqzer-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "4c297703df3e7e1a238656f6e26d707c7bec779b3ab0545de57841bdd860b264"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.0/sqzer-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "ffd35b0886d680a3e1546ae1849efe02aa43c1d13840a709e47dafce4f743292"
+      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.1/sqzer-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "8d1cabeb3c43c374761b7dc49e37549813b68fff25610e673bb33509404c7d45"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.0/sqzer-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5fb3cc9aab0ead01cbd65ad0e067d8e481eafa49795ee5074e2caa734449ec62"
+      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.1/sqzer-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "19d7399f85a2b50ccc8b8ea1b95edc80a2d777416c56c489e2d0d6df866a0a59"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.0/sqzer-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e99bd42e21a1ee63d37e9aab15f9744ef01d884b5ed9a95c62489490d638c17b"
+      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.1/sqzer-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3ab466fa6c22082c5445ab2546d386fde41cc011171994681cb03d79c6e22343"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
   depends_on "libheif"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
-    "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {},
+    "aarch64-apple-darwin":              {},
+    "aarch64-unknown-linux-gnu":         {},
+    "x86_64-apple-darwin":               {},
+    "x86_64-pc-windows-gnu":             {},
+    "x86_64-unknown-linux-gnu":          {},
     "x86_64-unknown-linux-musl-dynamic": {},
-    "x86_64-unknown-linux-musl-static": {}
-  }
+    "x86_64-unknown-linux-musl-static":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
