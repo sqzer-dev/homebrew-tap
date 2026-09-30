@@ -1,25 +1,25 @@
 class Sqzer < Formula
   desc "Command-line interface for sqzer."
   homepage "https://sqzer.dev"
-  version "0.1.1"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.1/sqzer-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "4c297703df3e7e1a238656f6e26d707c7bec779b3ab0545de57841bdd860b264"
+      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.2.0/sqzer-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "7dcf1c72a355e8fa92f236197827fc792ab403904480c25bd868426be4d86f5a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.1/sqzer-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "8d1cabeb3c43c374761b7dc49e37549813b68fff25610e673bb33509404c7d45"
+      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.2.0/sqzer-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "6fa5e60b4a963b3e6c5d0fff0e03e796d1cee84896fd977885e11162d40303fe"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.1/sqzer-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "19d7399f85a2b50ccc8b8ea1b95edc80a2d777416c56c489e2d0d6df866a0a59"
+      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.2.0/sqzer-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3414006b82278edfab96393b6c212164b33be78d929e467ce74d4128da6cb37c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.1.1/sqzer-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3ab466fa6c22082c5445ab2546d386fde41cc011171994681cb03d79c6e22343"
+      url "https://github.com/sqzer-dev/sqzer/releases/download/v0.2.0/sqzer-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9cb536ea432a760b46817db9de64e5174680d4bdbdf902c56f3553d1946c01e2"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
